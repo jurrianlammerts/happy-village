@@ -5,6 +5,8 @@
 @import './components/header.scss';
 @import './components/hero.scss';
 @import './components/cursor.scss';
+@import './components/menu.scss';
+@import './components/backdrop.scss';
 
 *,
 *::after,
@@ -22,6 +24,24 @@ body {
   color: #000;
   background: #fff;
   font-size: 16px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  -webkit-appearance: none;
 }
 
 .chat {
