@@ -7,29 +7,29 @@ const Hero = () => {
   }, []);
 
   return (
-    <section class="hero">
-      <div class="container">
-        <div class="hero-inner">
-          <div class="hero-inner-banner">
-            <div class="hero-inner-col">
-              <div class="hero-inner-title">
+    <section className="hero">
+      <div className="container">
+        <div className="hero-inner">
+          <div className="hero-inner-banner">
+            <div className="hero-inner-col">
+              <div className="hero-inner-title">
                 <h1>We make it happen</h1>
               </div>
-              <div class="hero-inner-links">
-                <div data-video-src="websites" class="hero-inner-link-item">
-                  <div class="hero-inner-link-item-padding"></div>
+              <div className="hero-inner-links">
+                <div data-video-src="websites" className="hero-inner-link-item">
+                  <div className="hero-inner-link-item-padding"></div>
                   <a href="/">
                     <span>Websites</span>
                   </a>
                 </div>
-                <div data-video-src="apps" class="hero-inner-link-item">
-                  <div class="hero-inner-link-item-padding"></div>
+                <div data-video-src="apps" className="hero-inner-link-item">
+                  <div className="hero-inner-link-item-padding"></div>
                   <a href="/">
                     <span>Apps</span>
                   </a>
                 </div>
-                <div class="hero-inner-link-item" data-video-src="branding">
-                  <div class="hero-inner-link-item-padding"></div>
+                <div className="hero-inner-link-item" data-video-src="branding">
+                  <div className="hero-inner-link-item-padding"></div>
                   <a href="/">
                     <span>Branding</span>
                   </a>
@@ -38,8 +38,8 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div class="hero-inner-footer">
-          <div class="hero-inner-footer-text">
+        <div className="hero-inner-footer">
+          <div className="hero-inner-footer-text">
             <p>
               Leading digital agency with solid design and development
               expertise. We build readymade websites, mobile applications, and

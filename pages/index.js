@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import Head from 'next/head';
 import { gsap } from 'gsap';
 
 import Hero from '../components/Hero';
 import Cursor from '../components/Cursor';
 import Chat from '../components/Chat';
 import Header from '../components/Header';
+import SEO from '../components/SEO';
 
 export default function Home() {
   useEffect(() => {
@@ -20,16 +20,12 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <Head>
-        <title>happy village.</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
+    <>
+      <SEO />
       <Header />
       <Cursor />
       <Hero />
       <Chat />
-    </div>
+    </>
   );
 }
