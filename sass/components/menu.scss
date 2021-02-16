@@ -54,7 +54,7 @@
       flex-direction: row;
 
       @include media('<=desktop') {
-        padding: 0 60px;
+        padding: 0 30px;
       }
 
       .menu-list {
@@ -112,7 +112,7 @@
     }
 
     @include media('<=desktop') {
-      padding: 60px;
+      padding: 30px;
     }
   }
 }

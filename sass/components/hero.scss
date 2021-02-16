@@ -34,20 +34,28 @@
         justify-content: center;
         align-items: center;
         display: none;
-        padding: 2rem 0;
+        padding: 2rem;
         width: 100%;
         @include media('<=desktop') {
           display: flex;
         }
         .hero-video-inner {
-          width: 240px;
-          height: 240px;
           overflow: hidden;
           border-radius: 50%;
           clip-path: inset(0 0 0 0 round 50%);
-          video {
-            width: 240px;
+          width: 300px;
+          height: 300px;
+          @include media('<=tablet') {
             height: 240px;
+            width: 240px;
+          }
+          video {
+            width: 300px;
+            height: 300px;
+            @include media('<=tablet') {
+              height: 240px;
+              width: 240px;
+            }
           }
         }
       }
