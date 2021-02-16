@@ -107,14 +107,14 @@ export default class Cursor {
   hideCursor() {
     gsap.to(CSSRulePlugin.getRule('.cursor::before'), {
       duration: 0.2,
-      cssRule: { opacity: 0, ease: 'Power2.in' },
+      cssRule: { opacity: 0, ease: 'power2.inOut' },
     });
   }
 
   showCursor() {
     gsap.to(CSSRulePlugin.getRule('.cursor::before'), {
       duration: 0.2,
-      cssRule: { opacity: 1, ease: 'Power2.in' },
+      cssRule: { opacity: 1, ease: 'power2.inOut' },
     });
   }
 
