@@ -5,12 +5,16 @@
   z-index: 10;
   contain: layout style size;
   pointer-events: none;
+  display: block;
   &.media-blend {
     z-index: 100;
     mix-blend-mode: exclusion;
     .cursor-media {
       filter: invert(1);
     }
+  }
+  @include media('<=desktop') {
+    display: none;
   }
   &:before {
     content: '';

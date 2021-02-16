@@ -1,36 +1,58 @@
 .hero {
   background: #fff;
   .container {
-    // FIXME: clean up
-    @media (min-width: 360px) {
-      padding: 0 30px;
+    padding: 5rem 240px;
+    height: 100%;
+    @include media('<=desktop') {
+      padding: 8rem 60px;
     }
-    @media (min-width: 768px) {
-      padding: 0 100px;
-    }
-    @media (min-width: 1024px) {
-      padding: 0 120px;
-    }
-    @media (min-width: 1200px) {
-      padding: 0 150px;
-    }
-    @media (min-width: 1350px) {
-      padding: 0 180px;
-    }
-    @media (min-width: 1600px) {
-      padding: 0 220px;
-    }
-    @media (min-width: 1800px) {
-      padding: 0 270px;
+    @include media('<=tablet') {
+      padding: 5rem 30px;
     }
 
     .hero-inner {
-      height: 100vh;
+      min-height: 80vh;
+      height: 100%;
+      width: 100%;
       display: flex;
-      align-items: center;
       justify-self: center;
+      align-items: center;
+      flex-direction: row;
 
+      @include media('<=tablet') {
+        flex-direction: column;
+        align-items: flex-start;
+        height: 100%;
+      }
+
+      @include media('<=desktop') {
+        height: 100%;
+        min-height: 100%;
+      }
+
+      .hero-video {
+        justify-content: center;
+        align-items: center;
+        display: none;
+        padding: 2rem 0;
+        width: 100%;
+        @include media('<=desktop') {
+          display: flex;
+        }
+        .hero-video-inner {
+          width: 240px;
+          height: 240px;
+          overflow: hidden;
+          border-radius: 50%;
+          clip-path: inset(0 0 0 0 round 50%);
+          video {
+            width: 240px;
+            height: 240px;
+          }
+        }
+      }
       .hero-inner-col {
+        position: relative;
         .hero-inner-title {
           z-index: 11;
           position: relative;
@@ -46,8 +68,18 @@
           z-index: 11;
           position: relative;
           display: flex;
+          justify-content: flex-start;
+
+          @include media('<=desktop') {
+            flex-direction: column;
+          }
+
           .hero-inner-link-item {
             .hero-inner-link-item-padding {
+              @include media('<=desktop') {
+                display: none;
+              }
+              display: block;
               position: relative;
               &:before {
                 content: '';
@@ -67,9 +99,9 @@
               text-decoration: none;
               color: transparent;
               transition: color 0.3s, -webkit-text-stroke 0.3s;
-              -webkit-text-stroke: 1px #000;
+              -webkit-text-stroke: 1px $black;
               &:hover {
-                color: black;
+                color: $black;
                 -webkit-text-stroke: 1px transparent;
               }
               span {
@@ -77,6 +109,19 @@
                 font-weight: 700;
                 text-shadow: none;
                 font-size: 5.8vw;
+              }
+
+              @include media('<=desktop') {
+                padding-left: 0;
+                color: $black;
+
+                &:hover {
+                  -webkit-text-stroke: 1px $black;
+                }
+
+                span {
+                  font-size: 10vw;
+                }
               }
             }
             &:first-child {
@@ -94,14 +139,16 @@
       }
     }
     .hero-inner-footer {
-      padding-bottom: 10rem;
       .hero-inner-footer-text {
         p {
           font-size: 30px;
           line-height: 40px;
-          margin-top: -90px;
           width: 100%;
           max-width: 50rem;
+          @include media('<=desktop') {
+            font-size: 20px;
+            line-height: 31px;
+          }
         }
       }
     }

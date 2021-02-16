@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { isMobile } from 'react-device-detect';
+import { isMobile, MobileView } from 'react-device-detect';
 
 import Cursor from '../utils/animatedCursor';
 
@@ -12,6 +12,18 @@ const Hero = () => {
     <section className="hero">
       <div className="container">
         <div className="hero-inner">
+          <div className="hero-video">
+            <div className="hero-video-inner">
+              <video
+                src="videos/websites_mobile.mp4"
+                preload="auto"
+                autoPlay
+                muted
+                loop
+                id="websites"
+              />
+            </div>
+          </div>
           <div className="hero-inner-banner">
             <div className="hero-inner-col">
               <div className="hero-inner-title">

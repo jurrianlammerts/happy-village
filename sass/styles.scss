@@ -8,6 +8,7 @@
 @import './components/cursor.scss';
 @import './components/menu.scss';
 @import './components/backdrop.scss';
+@import './components/chat.scss';
 @import './components/footer.scss';
 
 *,
@@ -44,23 +45,6 @@ button {
   -webkit-font-smoothing: inherit;
   -moz-osx-font-smoothing: inherit;
   -webkit-appearance: none;
-}
-
-.chat {
-  position: fixed;
-  bottom: 48px;
-  right: 48px;
-  height: 80px;
-  width: 80px;
-  border-radius: 100%;
-  background: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  svg {
-    fill: #fff;
-    width: 28px;
-  }
 }
 
 .loading {

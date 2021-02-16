@@ -6,7 +6,7 @@ header {
   z-index: 13;
 
   @include media('<=tablet') {
-    top: 60px;
+    top: 30px;
     left: 30px;
     right: 30px;
   }
@@ -28,6 +28,9 @@ header {
         align-items: center;
         justify-content: space-between;
         .header-inner-nav-link {
+          @include media('<=tablet') {
+            display: none;
+          }
           &:first-child {
             margin-right: 60px;
           }
