@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { gsap } from 'gsap';
+import { Cross as Hamburger } from 'hamburger-react';
 
 import Header from './Header';
 import Menu from './Menu';
@@ -8,9 +9,11 @@ import Backdrop from './Backdrop';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  console.log('menuOpen:', menuOpen);
 
   const handleMenu = () => {
+    const body = document.querySelector('body');
+    !menuOpen && body.classList.add('fixed');
+    menuOpen && body.classList.remove('fixed');
     setMenuOpen(!menuOpen);
   };
 
@@ -27,9 +30,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header handleMenu={handleMenu} />
+      <Header handleMenu={handleMenu} menuOpen={menuOpen} />
       {menuOpen && <Menu open={menuOpen} handleMenu={handleMenu} />}
-      {menuOpen && <Backdrop />}
+      {menuOpen && <Backdrop setMenuOpen={setMenuOpen} />}
       {children}
     </>
   );

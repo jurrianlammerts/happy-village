@@ -41,24 +41,29 @@ export default class Cursor {
   }
 
   onScaleMouse() {
+    // Loop through all items
     this.Item.forEach((link) => {
+      // If I am hovering on the item for on page load I want to scale the cursor media
       if (link.matches(':hover')) {
-        console.log(link);
         this.setVideo(link);
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       }
+      //On mouse enter scale the media-cursor to .8
       link.addEventListener('mouseenter', () => {
         this.setVideo(link);
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       });
+      //On mouse enter scale the media-cursor to 0
       link.addEventListener('mouseleave', () => {
         this.ScaleCursor(this.Cursor.children[0], 0);
       });
-      link.children[0].addEventListener('mouseenter', () => {
+      //Hover on a tag to expand to 1.2
+      link.children[1].addEventListener('mouseenter', () => {
         this.Cursor.classList.add('media-blend');
         this.ScaleCursor(this.Cursor.children[0], 1.2);
       });
-      link.children[0].addEventListener('mouseleave', () => {
+      // Bring scale back down .8
+      link.children[1].addEventListener('mouseleave', () => {
         this.Cursor.classList.remove('media-blend');
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       });

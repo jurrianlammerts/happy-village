@@ -1,12 +1,8 @@
 import Link from 'next/link';
-import PropTypes from 'prop-types';
 
-const Menu = ({ open, handleMenu }) => (
+const Menu = () => (
   <div className="menu">
     <div className="menu-inner">
-      <button onClick={handleMenu} className="menu-close-btn">
-        close
-      </button>
       <div className="menu-inner-row">
         <ul className="menu-list left">
           <span className="menu-list-label">Social</span>
@@ -72,8 +68,3 @@ const Menu = ({ open, handleMenu }) => (
 );
 
 export default Menu;
-
-Menu.propTypes = {
-  open: PropTypes.bool.isRequired,
-  handleMenu: PropTypes.func.isRequired,
-};

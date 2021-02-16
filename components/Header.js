@@ -1,4 +1,6 @@
-const Header = ({ handleMenu }) => (
+import { Cross as Hamburger } from 'hamburger-react';
+
+const Header = ({ handleMenu, menuOpen }) => (
   <header>
     <div className="header-inner">
       <div className="header-inner-col left">
@@ -8,14 +10,17 @@ const Header = ({ handleMenu }) => (
       </div>
       <div className="header-inner-col right">
         <div className="header-inner-nav">
-          <span className="header-inner-nav-link">showreel</span>
-          <button onClick={handleMenu} className="header-inner-nav-menu">
+          {/* <span className="header-inner-nav-link">showreel</span> */}
+          <div className="header-inner-nav-menu">
             <span className="header-inner-nav-link">menu</span>
-            <div className="header-inner-nav-menu-hamburger">
-              <span></span>
-              <span></span>
-            </div>
-          </button>
+            <Hamburger
+              toggled={menuOpen}
+              toggle={handleMenu}
+              size={24}
+              duration={0.2}
+              label="Show menu"
+            />
+          </div>
         </div>
       </div>
     </div>

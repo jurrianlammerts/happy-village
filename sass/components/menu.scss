@@ -9,14 +9,7 @@
   flex-direction: column;
   z-index: 12;
 
-  .menu-close-btn {
-    position: absolute;
-    top: 50px;
-    right: 60px;
-    padding: 1.5rem;
-    height: 1.5rem;
-    width: 1.5rem;
-  }
+  
 
   ul,
   ul li {
@@ -24,6 +17,11 @@
     padding: 0;
     text-indent: 0;
     list-style-type: none;
+  }
+
+  .hamburger-react {
+    position: absolute;
+    z-index: 20;
   }
 
   .menu-inner {
@@ -86,6 +84,6 @@
   .menu-footer {
     display: flex;
     flex-direction: column;
-    padding: 0 0 4rem 4rem;
+    padding: 0 0 4rem 8rem;
   }
 }
