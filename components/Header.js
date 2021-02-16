@@ -10,7 +10,6 @@ const Header = ({ handleMenu, menuOpen }) => (
       </div>
       <div className="header-inner-col right">
         <div className="header-inner-nav">
-          {/* <span className="header-inner-nav-link">showreel</span> */}
           <div className="header-inner-nav-menu">
             <span className="header-inner-nav-link">menu</span>
             <Hamburger

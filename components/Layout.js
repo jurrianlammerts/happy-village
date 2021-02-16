@@ -9,12 +9,27 @@ import Backdrop from './Backdrop';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const tl = gsap.timeline();
 
   const handleMenu = () => {
     const body = document.querySelector('body');
-    !menuOpen && body.classList.add('fixed');
-    menuOpen && body.classList.remove('fixed');
-    setMenuOpen(!menuOpen);
+
+    if (!menuOpen) {
+      body.classList.add('fixed');
+      setMenuOpen(true);
+      gsap.to('.menu', {
+        x: 0,
+        ease: 'power2.inOut',
+      });
+    }
+
+    if (menuOpen) {
+      body.classList.remove('fixed');
+      setMenuOpen(false);
+      tl.to('.menu', {
+        x: '100%',
+      });
+    }
   };
 
   useEffect(() => {
@@ -31,8 +46,8 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header handleMenu={handleMenu} menuOpen={menuOpen} />
-      {menuOpen && <Menu open={menuOpen} handleMenu={handleMenu} />}
-      {menuOpen && <Backdrop setMenuOpen={setMenuOpen} />}
+      <Menu open={menuOpen} handleMenu={handleMenu} />
+      {menuOpen && <Backdrop />}
       {children}
     </>
   );
