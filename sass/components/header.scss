@@ -4,6 +4,13 @@ header {
   left: 60px;
   right: 60px;
   z-index: 13;
+
+  @include media('<=tablet') {
+    top: 60px;
+    left: 30px;
+    right: 30px;
+  }
+
   .header-inner {
     display: flex;
     align-items: center;

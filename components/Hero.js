@@ -1,9 +1,11 @@
 import { useEffect } from 'react';
+import { isMobile } from 'react-device-detect';
+
 import Cursor from '../utils/animatedCursor';
 
 const Hero = () => {
   useEffect(() => {
-    new Cursor(document.querySelector('.cursor'));
+    !isMobile && new Cursor(document.querySelector('.cursor'));
   }, []);
 
   return (
