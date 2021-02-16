@@ -6,6 +6,7 @@ import { Cross as Hamburger } from 'hamburger-react';
 import Header from './Header';
 import Menu from './Menu';
 import Backdrop from './Backdrop';
+import Footer from './Footer';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -44,12 +45,14 @@ const Layout = ({ children }) => {
   }, []);
 
   return (
-    <>
+    <div className="page">
       <Header handleMenu={handleMenu} menuOpen={menuOpen} />
       <Menu open={menuOpen} handleMenu={handleMenu} />
       {menuOpen && <Backdrop />}
-      {children}
-    </>
+      <section className="page-inner">{children}</section>
+      <div className="placeholder" />
+      <Footer />
+    </div>
   );
 };
 

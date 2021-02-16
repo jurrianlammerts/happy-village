@@ -1,0 +1,12 @@
+.page {
+  height: 100vh;
+  .page-inner {
+    position: relative;
+    z-index: 3;
+    box-shadow: $black 0 7px 35px 0;
+  }
+  .placeholder {
+    z-index: 1;
+    height: 100vh;
+  }
+}
