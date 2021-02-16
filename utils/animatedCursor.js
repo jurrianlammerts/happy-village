@@ -1,5 +1,8 @@
 import { gsap } from 'gsap';
+import CSSRulePlugin from 'gsap/dist/CSSRulePlugin';
 import { lerp, getMousePos, getSiblings } from '.';
+
+gsap.registerPlugin(CSSRulePlugin);
 
 // Grab the mouse position and set it to mouse state
 let mouse = { x: 0, y: 0 };
@@ -48,16 +51,16 @@ export default class Cursor {
         this.setVideo(link);
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       }
-      //On mouse enter scale the media-cursor to .8
+      // On mouse enter scale the media-cursor to .8
       link.addEventListener('mouseenter', () => {
         this.setVideo(link);
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       });
-      //On mouse enter scale the media-cursor to 0
+      // On mouse enter scale the media-cursor to 0
       link.addEventListener('mouseleave', () => {
         this.ScaleCursor(this.Cursor.children[0], 0);
       });
-      //Hover on a tag to expand to 1.2
+      // Hover on a tag to expand to 1.2
       link.children[1].addEventListener('mouseenter', () => {
         this.Cursor.classList.add('media-blend');
         this.ScaleCursor(this.Cursor.children[0], 1.2);
@@ -101,9 +104,35 @@ export default class Cursor {
     });
   }
 
+  hideCursor() {
+    gsap.to(CSSRulePlugin.getRule('.cursor::before'), {
+      duration: 0.2,
+      cssRule: { opacity: 0, ease: 'Power2.in' },
+    });
+  }
+
+  showCursor() {
+    gsap.to(CSSRulePlugin.getRule('.cursor::before'), {
+      duration: 0.2,
+      cssRule: { opacity: 1, ease: 'Power2.in' },
+    });
+  }
+
   render() {
     this.cursorConfigs.x.current = mouse.x;
     this.cursorConfigs.y.current = mouse.y;
+    const treshold = 10;
+
+    if (
+      mouse.x < treshold ||
+      mouse.x > window.innerWidth - treshold ||
+      mouse.y < treshold ||
+      mouse.y > window.innerHeight - treshold
+    ) {
+      this.hideCursor();
+    } else {
+      this.showCursor();
+    }
 
     // lerp
     for (const key in this.cursorConfigs) {
