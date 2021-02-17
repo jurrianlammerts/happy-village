@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import CSSRulePlugin from 'gsap/dist/CSSRulePlugin';
-import { lerp, getMousePos, getSiblings } from '.';
+import { lerp, getMousePos, getSiblings } from './cursorFunctions';
 
 gsap.registerPlugin(CSSRulePlugin);
 
