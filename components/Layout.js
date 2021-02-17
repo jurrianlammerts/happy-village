@@ -32,16 +32,16 @@ const Layout = ({ children }) => {
     }
   };
 
-  useEffect(() => {
-    const body = document.querySelector('body');
+  // useEffect(() => {
+  //   const body = document.querySelector('body');
 
-    body.classList.remove('loading');
-    gsap.from(body, {
-      opacity: 0,
-      duration: 1,
-      ease: 'Power3.easeInOut',
-    });
-  }, []);
+  //   body.classList.remove('loading');
+  //   gsap.from(body, {
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: 'Power3.easeInOut',
+  //   });
+  // }, []);
 
   return (
     <div className="page">
