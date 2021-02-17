@@ -21,7 +21,7 @@ const Hero = () => {
                 ref={videoRef}
                 src="videos/websites_mobile.mp4"
                 preload="auto"
-                autoPlay
+                // autoPlay
                 muted
                 loop
                 id="websites"
