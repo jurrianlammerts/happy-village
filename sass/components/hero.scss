@@ -120,11 +120,15 @@
               @include media('<=desktop') {
                 padding-left: 0;
                 font-size: 8vw;
+                font-weight: 500;
                 color: $black;
 
                 &:hover {
                   -webkit-text-stroke: 1px $black;
                 }
+              }
+              @include media('<=tablet') {
+                font-size: 10vw;
               }
             }
             &:first-child {

@@ -8,7 +8,7 @@ const Hero = () => {
   const videoRef = useRef(null);
   useEffect(() => {
     !isMobile && new Cursor(document.querySelector('.cursor'));
-    videoRef.current.play();
+    // videoRef.current.play();
   }, []);
 
   return (
@@ -21,7 +21,8 @@ const Hero = () => {
                 ref={videoRef}
                 src="videos/websites_mobile.mp4"
                 preload="auto"
-                // autoPlay
+                autoPlay
+                playsinline
                 muted
                 loop
                 id="websites"
