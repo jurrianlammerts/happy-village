@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
   return (
     <div className="page">
       <Header handleMenu={handleMenu} menuOpen={menuOpen} />
-      <Menu open={menuOpen} handleMenu={handleMenu} />
+      <Menu handleMenu={handleMenu} menuOpen={menuOpen} />
       {menuOpen && <Backdrop />}
       <section className="page-inner">{children}</section>
       {/* For the paralax footer */}
