@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="footer-inner">
       <div className="footer-inner-top">
         <h2>Have an idea?</h2>
-        <h2>
+        <h2 id="hover-link">
           <Link href="/">Tell us about it</Link>
         </h2>
       </div>
