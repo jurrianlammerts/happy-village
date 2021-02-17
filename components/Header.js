@@ -12,8 +12,9 @@ const Header = ({ handleMenu, menuOpen }) => (
         <div className="header-inner-nav">
           <div className="header-inner-nav-menu">
             <span className="header-inner-nav-label">menu</span>
-            <div className="header-inner-nav-burger">
+            <div className="header-inner-nav-burger" id="hover-link">
               <Hamburger
+                id="hover-link"
                 toggled={menuOpen}
                 toggle={handleMenu}
                 size={24}

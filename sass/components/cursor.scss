@@ -4,9 +4,12 @@
   left: 0px;
   z-index: 20;
   contain: layout style size;
-  mix-blend-mode: difference;
   pointer-events: none;
   display: block;
+  mix-blend-mode: difference;
+  @include media('<=desktop') {
+    display: none;
+  }
   &.media-blend {
     z-index: 100;
     mix-blend-mode: exclusion;

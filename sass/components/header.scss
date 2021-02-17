@@ -49,7 +49,11 @@ header {
             }
           }
           .header-inner-nav-burger {
+            position: relative;
+            width: 48px;
+            height: 48px;
             // I know this is hacky, but it works 😅
+            // FIXME: improve this someday
             .hamburger-react {
               position: fixed !important;
               top: 50px;

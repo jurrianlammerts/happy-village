@@ -83,7 +83,6 @@ export default class Cursor {
 
     this.Link.forEach((link) => {
       link.addEventListener('mouseenter', () => {
-        console.log('hover');
         root.style.setProperty('--scale', 1);
       });
       link.addEventListener('mouseleave', () => {
