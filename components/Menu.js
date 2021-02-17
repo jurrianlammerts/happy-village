@@ -71,7 +71,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
       </div>
       <div className="menu-footer">
         <span className="menu-footer-label">Get in touch</span>
-        <a href="mailto:info@happy-village.com">info@happy-village.com</a>
+        <a href="mailto:info@lamb-digital.com">info@lamb-digital.com</a>
       </div>
     </div>
   );

@@ -1,5 +1,3 @@
-import { useEffect } from 'react';
-import { gsap } from 'gsap';
 import { BrowserView } from 'react-device-detect';
 
 import Hero from '../components/Hero';

@@ -10,7 +10,7 @@ const Footer = () => (
         </h2>
       </div>
       <div className="footer-inner-bottom">
-        <a href="mailto:info@happy-village.com">happy-village.com</a>
+        <a href="mailto:info@lamb-digital.com">info@lamb-digital.com</a>
       </div>
     </div>
   </footer>

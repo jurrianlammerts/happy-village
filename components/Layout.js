@@ -10,7 +10,6 @@ import Footer from './Footer';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const tl = gsap.timeline();
 
   const handleMenu = () => {
     const body = document.querySelector('body');
@@ -27,7 +26,7 @@ const Layout = ({ children }) => {
     if (menuOpen) {
       body.classList.remove('fixed');
       setMenuOpen(false);
-      tl.to('.menu', {
+      gsap.to('.menu', {
         x: '100%',
       });
     }

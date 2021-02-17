@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 import { isMobile, MobileView } from 'react-device-detect';
 
 import Cursor from '../utils/animatedCursor';
@@ -9,6 +10,12 @@ const Hero = () => {
   const videoRef = useRef(null);
   useEffect(() => {
     !isMobile && new Cursor(document.querySelector('.cursor'));
+
+    gsap.fromTo(
+      '.hero-video-inner',
+      { scale: 0 },
+      { scale: 1, ease: 'bounce.out', delay: 0.3, duration: 1 },
+    );
   }, []);
 
   return (
@@ -17,7 +24,10 @@ const Hero = () => {
         <div className="hero-inner">
           <div className="hero-video">
             <div className="hero-video-inner">
-              <AutoplayVideo id="mobile-video" src="videos/websites_mobile.mp4" />
+              <AutoplayVideo
+                id="mobile-video"
+                src="videos/websites_mobile.mp4"
+              />
             </div>
           </div>
           <div className="hero-inner-banner">

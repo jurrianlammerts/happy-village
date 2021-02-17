@@ -5,7 +5,7 @@ const Header = ({ handleMenu, menuOpen }) => (
     <div className="header-inner">
       <div className="header-inner-col left">
         <div className="header-inner-logo">
-          <h2>happy village.</h2>
+          <h2>lamb digital</h2>
         </div>
       </div>
       <div className="header-inner-col right">
