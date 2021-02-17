@@ -9,9 +9,6 @@ const Footer = () => (
           <Link href="/">Tell us about it</Link>
         </h2>
       </div>
-      <div className="footer-inner-bottom">
-        <a href="mailto:info@lamb-digital.com">info@lamb-digital.com</a>
-      </div>
     </div>
   </footer>
 );

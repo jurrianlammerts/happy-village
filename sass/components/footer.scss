@@ -9,6 +9,10 @@
   background-color: $black;
   color: $white;
 
+  @include media('<=tablet') {
+    height: 75vh;
+  }
+
   a {
     font-weight: 100;
     color: $white;
@@ -26,9 +30,6 @@
     @include media('<=desktop') {
       padding: 8rem 60px;
     }
-    @include media('<=tablet') {
-      padding: 5rem 30px;
-    }
 
     .footer-inner-top {
       display: flex;
@@ -41,8 +42,16 @@
         font-weight: 500;
       }
     }
-    .footer-inner-bottom {
-
+    @include media('<=tablet') {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      .footer-inner-top {
+        h2 {
+          font-size: 8vw;
+        }
+      }
     }
   }
 }
