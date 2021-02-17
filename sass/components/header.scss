@@ -17,16 +17,17 @@ header {
     .header-inner-col {
       .header-inner-logo {
         h2 {
-          @include media('<=tablet') {
-            top: 30px;
-            left: 0;
-            right: 30px;
-          }
+          top: 0;
           position: absolute;
           z-index: 13;
           line-height: 1;
           margin: 0;
           font-size: 1.5rem;
+          @include media('<=tablet') {
+            top: 30px;
+            left: 0;
+            right: 30px;
+          }
         }
       }
       .header-inner-nav {
