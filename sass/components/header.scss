@@ -5,7 +5,7 @@ header {
   right: 60px;
 
   @include media('<=tablet') {
-    top: 30px;
+    top: 10px;
     left: 30px;
     right: 30px;
   }
@@ -57,7 +57,7 @@ header {
               z-index: 15;
               mix-blend-mode: exclusion;
               @include media('<=tablet') {
-                top: 48px;
+                top: 28px;
                 right: 30px;
               }
               & > * {
