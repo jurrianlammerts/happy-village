@@ -3,12 +3,12 @@ import { useEffect, useRef } from 'react';
 import { isMobile, MobileView } from 'react-device-detect';
 
 import Cursor from '../utils/animatedCursor';
+import AutoplayVideo from './AutoplayVideo';
 
 const Hero = () => {
   const videoRef = useRef(null);
   useEffect(() => {
     !isMobile && new Cursor(document.querySelector('.cursor'));
-    // videoRef.current.play();
   }, []);
 
   return (
@@ -17,16 +17,7 @@ const Hero = () => {
         <div className="hero-inner">
           <div className="hero-video">
             <div className="hero-video-inner">
-              <video
-                ref={videoRef}
-                src="videos/websites_mobile.mp4"
-                preload="auto"
-                autoPlay
-                playsinline
-                muted
-                loop
-                id="websites"
-              />
+              <AutoplayVideo id="mobile-video" src="videos/websites_mobile.mp4" />
             </div>
           </div>
           <div className="hero-inner-banner">
