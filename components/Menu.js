@@ -5,8 +5,8 @@ const Menu = () => (
     <div className="menu-inner">
       <div className="menu-inner-row">
         <ul className="menu-list left">
-          <span className="menu-list-label">Social</span>
-          <li>
+          <li className="menu-list-label">Social</li>
+          <li className="menu-list-item">
             <a
               href="http://facebook.com"
               target="_blank"
@@ -15,7 +15,7 @@ const Menu = () => (
               Facebook
             </a>
           </li>
-          <li>
+          <li className="menu-list-item">
             <a
               href="http://instagram.com"
               target="_blank"
@@ -24,7 +24,7 @@ const Menu = () => (
               instagram
             </a>
           </li>
-          <li>
+          <li className="menu-list-item">
             <a
               href="http://youtube.com"
               target="_blank"
@@ -33,7 +33,7 @@ const Menu = () => (
               youtube
             </a>
           </li>
-          <li>
+          <li className="menu-list-item">
             <a
               href="http://instagram.com"
               target="_blank"
@@ -44,17 +44,17 @@ const Menu = () => (
           </li>
         </ul>
         <ul className="menu-list right">
-          <span className="menu-list-label">Menu</span>
-          <li>
+          <li className="menu-list-label">Menu</li>
+          <li className="menu-list-item">
             <Link href="/">Work</Link>
           </li>
-          <li>
+          <li className="menu-list-item">
             <Link href="/">About</Link>
           </li>
-          <li>
+          <li className="menu-list-item">
             <Link href="/">Services</Link>
           </li>
-          <li>
+          <li className="menu-list-item">
             <Link href="/">Contact</Link>
           </li>
         </ul>

@@ -72,7 +72,7 @@
             display: none;
           }
 
-          li {
+          .menu-list-item {
             display: block;
             padding: 0.75rem 0;
             font-size: 1rem;
@@ -85,7 +85,7 @@
         &.right {
           flex: 1.2;
 
-          li {
+          .menu-list-item {
             display: inline-block;
             margin: 1rem 0;
             a {
@@ -116,7 +116,11 @@
     }
 
     @include media('<=desktop') {
-      padding: 30px;
+      padding: 0 0 2rem 5rem;
+    }
+
+    @include media('<=tablet') {
+      padding: 2rem;
     }
   }
 }
