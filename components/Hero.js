@@ -14,7 +14,7 @@ const Hero = () => {
     gsap.fromTo(
       '.hero-video-inner',
       { scale: 0 },
-      { scale: 1, ease: 'bounce.out', delay: 0.3, duration: 1 },
+      { scale: 1, ease: 'bounce.out', delay: 0.5, duration: 1.25 },
     );
   }, []);
 
