@@ -11,64 +11,56 @@ header {
   }
 
   .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    .header-inner-col {
-      .header-inner-logo {
-        h2 {
-          top: 0;
-          position: absolute;
-          z-index: 13;
-          line-height: 1;
-          margin: 0;
-          font-size: 1.5rem;
-          @include media('<=tablet') {
-            top: 30px;
-            left: 0;
-            right: 30px;
-          }
+    .header-inner-logo {
+      a {
+        font-weight: 600;
+        text-decoration: none;
+        color: $black;
+        width: fit-content;
+        top: 0;
+        position: absolute;
+        z-index: 13;
+        line-height: 1;
+        margin: 0;
+        font-size: 1.5rem;
+        @include media('<=tablet') {
+          top: 30px;
+          left: 0;
+          right: 30px;
         }
       }
-      .header-inner-nav {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .header-inner-nav-menu {
-          display: flex;
-          align-items: center;
-          .header-inner-nav-label {
-            font-size: 1.25rem;
-            font-weight: 500;
-            position: absolute;
-            z-index: 10;
-            top: 0;
-            right: 54px;
-            display: block;
-            @include media('<=tablet') {
-              display: none;
-            }
+    }
+    .header-inner-menu {
+      .header-inner-menu-label {
+        font-size: 1.25rem;
+        font-weight: 500;
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 54px;
+        display: block;
+        @include media('<=tablet') {
+          display: none;
+        }
+      }
+      .header-inner-menu-burger {
+        // position: relative;
+        // width: 48px;
+        // height: 48px;
+        // I know this is hacky, but it works 😅
+        // FIXME: improve this someday
+        .hamburger-react {
+          position: fixed !important;
+          top: 50px;
+          right: 60px;
+          z-index: 15;
+          mix-blend-mode: exclusion;
+          @include media('<=tablet') {
+            top: 28px;
+            right: 30px;
           }
-          .header-inner-nav-burger {
-            position: relative;
-            width: 48px;
-            height: 48px;
-            // I know this is hacky, but it works 😅
-            // FIXME: improve this someday
-            .hamburger-react {
-              position: fixed !important;
-              top: 50px;
-              right: 60px;
-              z-index: 15;
-              mix-blend-mode: exclusion;
-              @include media('<=tablet') {
-                top: 28px;
-                right: 30px;
-              }
-              & > * {
-                background-color: $white !important;
-              }
-            }
+          & > * {
+            background-color: $white !important;
           }
         }
       }
