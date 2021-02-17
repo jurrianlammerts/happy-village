@@ -8,8 +8,5 @@
   .page-placeholder {
     z-index: 1;
     height: 100vh;
-    @include media('<=tablet') {
-      height: 75vh;
-    }
   }
 }

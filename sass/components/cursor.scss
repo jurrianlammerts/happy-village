@@ -2,8 +2,9 @@
   position: fixed;
   top: 0px;
   left: 0px;
-  z-index: 10;
+  z-index: 20;
   contain: layout style size;
+  mix-blend-mode: difference;
   pointer-events: none;
   display: block;
   &.media-blend {
@@ -13,9 +14,6 @@
       filter: invert(1);
     }
   }
-  @include media('<=desktop') {
-    display: none;
-  }
   &:before {
     content: '';
     position: absolute;
@@ -24,8 +22,9 @@
     display: block;
     width: 48px;
     height: 48px;
-    transform: scale(0.2);
-    background: black;
+    transform: scale(var(--scale));
+    transition: all 0.2s ease-in;
+    background: white;
     border-radius: 50%;
   }
   .cursor-media {

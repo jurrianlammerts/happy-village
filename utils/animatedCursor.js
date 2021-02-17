@@ -14,12 +14,14 @@ export default class Cursor {
     this.Cursor = el;
     this.Cursor.style.opacity = 0;
     this.Item = document.querySelectorAll('.hero-inner-link-item');
+    this.Link = document.querySelectorAll('#hover-link');
     this.Hero = document.querySelector('.hero-inner');
     this.bounds = this.Cursor.getBoundingClientRect();
     this.cursorConfigs = {
       x: { previous: 0, current: 0, amt: 0.2 },
       y: { previous: 0, current: 0, amt: 0.2 },
     };
+
     this.onMouseMoveEv = () => {
       this.cursorConfigs.x.previous = this.cursorConfigs.x.current = mouse.x;
       this.cursorConfigs.y.previous = this.cursorConfigs.y.previous = mouse.y;
@@ -33,6 +35,9 @@ export default class Cursor {
 
       // Execute scale function
       this.onScaleMouse();
+
+      // Execute hover function
+      this.onLinkHover();
 
       // The window.requestAnimationFrame() method tells the browser that you wish to perform an animation and requests that the browser calls a specified function to update an animation before the next repaint. The method takes a callback as an argument to be invoked before the repaint.
       requestAnimationFrame(() => this.render());
@@ -69,6 +74,20 @@ export default class Cursor {
       link.children[1].addEventListener('mouseleave', () => {
         this.Cursor.classList.remove('media-blend');
         this.ScaleCursor(this.Cursor.children[0], 0.8);
+      });
+    });
+  }
+
+  onLinkHover() {
+    const root = document.documentElement;
+
+    this.Link.forEach((link) => {
+      link.addEventListener('mouseenter', () => {
+        console.log('hover');
+        root.style.setProperty('--scale', 1);
+      });
+      link.addEventListener('mouseleave', () => {
+        root.style.setProperty('--scale', 0.2);
       });
     });
   }

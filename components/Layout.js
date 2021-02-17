@@ -2,14 +2,21 @@ import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { gsap } from 'gsap';
 import { Cross as Hamburger } from 'hamburger-react';
+import { BrowserView, isMobile } from 'react-device-detect';
 
 import Header from './Header';
 import Menu from './Menu';
 import Backdrop from './Backdrop';
 import Footer from './Footer';
+import CursorComponent from './Cursor';
+import Cursor from '../utils/animatedCursor';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    !isMobile && new Cursor(document.querySelector('.cursor'));
+  }, []);
 
   const handleMenu = () => {
     const body = document.querySelector('body');
@@ -32,21 +39,14 @@ const Layout = ({ children }) => {
     }
   };
 
-  // useEffect(() => {
-  //   const body = document.querySelector('body');
-
-  //   body.classList.remove('loading');
-  //   gsap.from(body, {
-  //     opacity: 0,
-  //     duration: 1,
-  //     ease: 'Power3.easeInOut',
-  //   });
-  // }, []);
-
   return (
     <div className="page">
       <Header handleMenu={handleMenu} menuOpen={menuOpen} />
       <Menu handleMenu={handleMenu} menuOpen={menuOpen} />
+      <BrowserView>
+        <CursorComponent />
+      </BrowserView>
+
       {menuOpen && <Backdrop />}
       <section className="page-inner">{children}</section>
       {/* For the paralax footer */}

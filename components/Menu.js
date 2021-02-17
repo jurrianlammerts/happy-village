@@ -17,6 +17,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
             <li className="menu-list-label">Social</li>
             <li className="menu-list-item">
               <a
+                id="hover-link"
                 href="http://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -26,6 +27,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
             </li>
             <li className="menu-list-item">
               <a
+                id="hover-link"
                 href="http://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -35,6 +37,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
             </li>
             <li className="menu-list-item">
               <a
+                id="hover-link"
                 href="http://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -44,6 +47,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
             </li>
             <li className="menu-list-item">
               <a
+                id="hover-link"
                 href="http://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -55,23 +59,33 @@ const Menu = ({ handleMenu, menuOpen }) => {
           <ul className="menu-list right">
             <li className="menu-list-label">Menu</li>
             <li className="menu-list-item">
-              <Link href="/">Work</Link>
+              <Link href="/">
+                <a id="hover-link">Work</a>
+              </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">About</Link>
+              <Link href="/">
+                <a id="hover-link">About</a>
+              </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">Services</Link>
+              <Link href="/">
+                <a id="hover-link">Services</a>
+              </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">Contact</Link>
+              <Link href="/">
+                <a id="hover-link">Contact</a>
+              </Link>
             </li>
           </ul>
         </div>
       </div>
       <div className="menu-footer">
         <span className="menu-footer-label">Get in touch</span>
-        <a href="mailto:info@lamb-digital.com">info@lamb-digital.com</a>
+        <a id="hover-link" href="mailto:info@lamb-digital.com">
+          info@lamb-digital.com
+        </a>
       </div>
     </div>
   );

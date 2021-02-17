@@ -3,14 +3,12 @@ import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { isMobile, MobileView } from 'react-device-detect';
 
-import Cursor from '../utils/animatedCursor';
 import AutoplayVideo from './AutoplayVideo';
 
 const Hero = () => {
   const videoRef = useRef(null);
-  useEffect(() => {
-    !isMobile && new Cursor(document.querySelector('.cursor'));
 
+  useEffect(() => {
     gsap.fromTo(
       '.hero-video-inner',
       { scale: 0 },
