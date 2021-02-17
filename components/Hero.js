@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { useEffect } from 'react';
 import { isMobile, MobileView } from 'react-device-detect';
 
@@ -32,21 +33,15 @@ const Hero = () => {
               <div className="hero-inner-links">
                 <div data-video-src="websites" className="hero-inner-link-item">
                   <div className="hero-inner-link-item-padding"></div>
-                  <a href="/">
-                    <span>Websites</span>
-                  </a>
+                  <Link href="/">Websites</Link>
                 </div>
                 <div data-video-src="apps" className="hero-inner-link-item">
                   <div className="hero-inner-link-item-padding"></div>
-                  <a href="/">
-                    <span>Apps</span>
-                  </a>
+                  <Link href="/">Apps</Link>
                 </div>
                 <div className="hero-inner-link-item" data-video-src="branding">
                   <div className="hero-inner-link-item-padding"></div>
-                  <a href="/">
-                    <span>Branding</span>
-                  </a>
+                  <Link href="/">Branding</Link>
                 </div>
               </div>
             </div>

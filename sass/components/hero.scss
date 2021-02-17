@@ -107,28 +107,23 @@
               text-decoration: none;
               color: transparent;
               transition: color 0.3s, -webkit-text-stroke 0.3s;
+              line-height: 1.1;
+              font-weight: 700;
+              text-shadow: none;
+              font-size: 5.8vw;
               -webkit-text-stroke: 1px $black;
               &:hover {
                 color: $black;
                 -webkit-text-stroke: 1px transparent;
               }
-              span {
-                line-height: 1.1;
-                font-weight: 700;
-                text-shadow: none;
-                font-size: 5.8vw;
-              }
 
               @include media('<=desktop') {
                 padding-left: 0;
+                font-size: 8vw;
                 color: $black;
 
                 &:hover {
                   -webkit-text-stroke: 1px $black;
-                }
-
-                span {
-                  font-size: 10vw;
                 }
               }
             }

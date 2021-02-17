@@ -8,4 +8,41 @@
   height: 100vh;
   background-color: $black;
   color: $white;
+
+  a {
+    font-weight: 100;
+    color: $white;
+    text-decoration: none;
+    border-bottom: 1px solid $white;
+    transition: all 0.2s ease-in;
+    &:hover {
+      border-bottom: 1px solid $black;
+    }
+  }
+
+  .footer-inner {
+    padding: 5rem 240px;
+    height: 100%;
+    @include media('<=desktop') {
+      padding: 8rem 60px;
+    }
+    @include media('<=tablet') {
+      padding: 5rem 30px;
+    }
+
+    .footer-inner-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+      h2 {
+        font-size: 80px;
+        margin: 0;
+        font-weight: 500;
+      }
+    }
+    .footer-inner-bottom {
+
+    }
+  }
 }

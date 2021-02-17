@@ -11,14 +11,16 @@ const Header = ({ handleMenu, menuOpen }) => (
       <div className="header-inner-col right">
         <div className="header-inner-nav">
           <div className="header-inner-nav-menu">
-            <span className="header-inner-nav-link">menu</span>
-            <Hamburger
-              toggled={menuOpen}
-              toggle={handleMenu}
-              size={24}
-              duration={0.2}
-              label="Show menu"
-            />
+            <span className="header-inner-nav-label">menu</span>
+            <div className="header-inner-nav-burger">
+              <Hamburger
+                toggled={menuOpen}
+                toggle={handleMenu}
+                size={24}
+                duration={0.2}
+                label="Show menu"
+              />
+            </div>
           </div>
         </div>
       </div>

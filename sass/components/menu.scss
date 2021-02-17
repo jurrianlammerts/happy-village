@@ -11,7 +11,7 @@
   transform: translateX(100%);
 
   @include media('<=desktop') {
-    width: 75%;
+    width: 70%;
   }
 
   @include media('<=tablet') {
@@ -54,7 +54,11 @@
       flex-direction: row;
 
       @include media('<=desktop') {
-        padding: 0 30px;
+        padding: 0 5rem;
+      }
+
+      @include media('<=tablet') {
+        padding: 0 2rem;
       }
 
       .menu-list {
