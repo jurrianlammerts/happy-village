@@ -14,7 +14,7 @@ export default class Cursor {
     this.Cursor = el;
     this.Cursor.style.opacity = 0;
     this.Item = document.querySelectorAll('.hero-inner-link-item');
-    this.Link = document.querySelectorAll('#hover-link');
+    this.Link = document.querySelectorAll('.hover-link');
     this.Hero = document.querySelector('.hero-inner');
     this.bounds = this.Cursor.getBoundingClientRect();
     this.cursorConfigs = {

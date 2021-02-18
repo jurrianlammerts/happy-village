@@ -9,9 +9,8 @@ const Header = ({ handleMenu, menuOpen }) => (
       </div>
       <div className="header-inner-menu">
         <span className="header-inner-menu-label">menu</span>
-        <div className="header-inner-menu-burger" id="hover-link">
+        <div className="header-inner-menu-burger hover-link">
           <Hamburger
-            id="hover-link"
             toggled={menuOpen}
             toggle={handleMenu}
             size={24}

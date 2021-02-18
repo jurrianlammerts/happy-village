@@ -10,6 +10,7 @@
   &.media-blend {
     z-index: 100;
     mix-blend-mode: exclusion;
+    display: block;
     .cursor-media {
       filter: invert(1);
     }
@@ -29,6 +30,9 @@
   }
   .cursor-media {
     display: block;
+    @include media('<=desktop') {
+      display: none;
+    }
     height: 350px;
     width: 350px;
     overflow: hidden;

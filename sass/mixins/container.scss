@@ -1,0 +1,10 @@
+@mixin container {
+  padding: 5rem 240px;
+  height: 100%;
+  @include media('<=desktop') {
+    padding: 8rem 60px;
+  }
+  @include media('<=tablet') {
+    padding: 5rem 30px;
+  }
+}

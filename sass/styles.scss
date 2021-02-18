@@ -1,6 +1,8 @@
 // pre-defined style
 @import './variables.scss';
 @import './breakpoints.scss';
+// mixins
+@import './mixins/container';
 // components
 @import './components/header.scss';
 @import './components/page.scss';
@@ -10,6 +12,8 @@
 @import './components/backdrop.scss';
 @import './components/chat.scss';
 @import './components/footer.scss';
+@import './components/hover-link.scss';
+@import './components/featured-projects.scss';
 
 *,
 *::after,
@@ -30,7 +34,7 @@ body {
     sans-serif;
   color: #000;
   background: #fff;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 button {

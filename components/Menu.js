@@ -17,7 +17,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
             <li className="menu-list-label">Social</li>
             <li className="menu-list-item">
               <a
-                id="hover-link"
+                className="hover-link small"
                 href="http://facebook.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -27,7 +27,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
             </li>
             <li className="menu-list-item">
               <a
-                id="hover-link"
+                className="hover-link small"
                 href="http://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -37,7 +37,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
             </li>
             <li className="menu-list-item">
               <a
-                id="hover-link"
+                className="hover-link small"
                 href="http://youtube.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -47,7 +47,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
             </li>
             <li className="menu-list-item">
               <a
-                id="hover-link"
+                className="hover-link small"
                 href="http://instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -60,22 +60,22 @@ const Menu = ({ handleMenu, menuOpen }) => {
             <li className="menu-list-label">Menu</li>
             <li className="menu-list-item">
               <Link href="/">
-                <a id="hover-link">Work</a>
+                <a className="hover-link">Work</a>
               </Link>
             </li>
             <li className="menu-list-item">
               <Link href="/">
-                <a id="hover-link">About</a>
+                <a className="hover-link">About</a>
               </Link>
             </li>
             <li className="menu-list-item">
               <Link href="/">
-                <a id="hover-link">Services</a>
+                <a className="hover-link">Services</a>
               </Link>
             </li>
             <li className="menu-list-item">
               <Link href="/">
-                <a id="hover-link">Contact</a>
+                <a className="hover-link">Contact</a>
               </Link>
             </li>
           </ul>
@@ -83,7 +83,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
       </div>
       <div className="menu-footer">
         <span className="menu-footer-label">Get in touch</span>
-        <a id="hover-link" href="mailto:info@lamb-digital.com">
+        <a className="hover-link small" href="mailto:info@lamb-digital.com">
           info@lamb-digital.com
         </a>
       </div>

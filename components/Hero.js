@@ -44,7 +44,7 @@ const Hero = () => {
                 </div>
                 <div className="hero-inner-link-item" data-video-src="branding">
                   <div className="hero-inner-link-item-padding"></div>
-                  <Link href="/">Branding</Link>
+                  <Link href="/">Strategy</Link>
                 </div>
               </div>
             </div>
