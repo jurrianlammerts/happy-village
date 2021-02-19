@@ -9,13 +9,16 @@ import Menu from './Menu';
 import Backdrop from './Backdrop';
 import Footer from './Footer';
 import CursorComponent from './Cursor';
-import Cursor from '../utils/animatedCursor';
+import Cursor from '../utils/cursor';
+import Button from '../utils/cursor';
 
 const Layout = ({ children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    !isMobile && new Cursor(document.querySelector('.cursor'));
+    if (!isMobile) {
+      new Cursor(document.querySelector('.cursor'));
+    }
   }, []);
 
   const handleMenu = () => {

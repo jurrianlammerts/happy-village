@@ -1,6 +1,6 @@
 import { gsap } from 'gsap';
 import CSSRulePlugin from 'gsap/dist/CSSRulePlugin';
-import { lerp, getMousePos, getSiblings } from './cursorFunctions';
+import { lerp, getMousePos, getSiblings } from './mouseFunctions';
 
 gsap.registerPlugin(CSSRulePlugin);
 
@@ -12,19 +12,20 @@ export default class Cursor {
     window.addEventListener('mousemove', (ev) => (mouse = getMousePos(ev)));
 
     this.Cursor = el;
-    this.Cursor.style.opacity = 0;
     this.Item = document.querySelectorAll('.hero-inner-link-item');
     this.Link = document.querySelectorAll('.hover-link');
     this.Hero = document.querySelector('.hero-inner');
     this.bounds = this.Cursor.getBoundingClientRect();
-    this.cursorConfigs = {
+    this.renderedStyles = {
       x: { previous: 0, current: 0, amt: 0.2 },
       y: { previous: 0, current: 0, amt: 0.2 },
+      scale: { previous: 1, current: 1, amt: 0.2 },
+      opacity: { previous: 1, current: 1, amt: 0.2 },
     };
 
     this.onMouseMoveEv = () => {
-      this.cursorConfigs.x.previous = this.cursorConfigs.x.current = mouse.x;
-      this.cursorConfigs.y.previous = this.cursorConfigs.y.previous = mouse.y;
+      this.renderedStyles.x.previous = this.renderedStyles.x.current = mouse.x;
+      this.renderedStyles.y.previous = this.renderedStyles.y.previous = mouse.y;
 
       // Set cursor opacity to 1 when hovered on screen
       gsap.to(this.Cursor, {
@@ -83,9 +84,11 @@ export default class Cursor {
 
     this.Link.forEach((link) => {
       link.addEventListener('mouseenter', () => {
+        this.enter();
         root.style.setProperty('--scale', 1);
       });
       link.addEventListener('mouseleave', () => {
+        this.leave();
         root.style.setProperty('--scale', 0.2);
       });
     });
@@ -113,55 +116,32 @@ export default class Cursor {
     });
   }
 
-  // Scale animation
-  scaleAnimation(el, amt) {
-    gsap.to(el, {
-      duration: 0.6,
-      scale: amt,
-      ease: 'Power3.easeOut',
-    });
+  enter() {
+    this.renderedStyles['scale'].current = 4;
+    this.renderedStyles['opacity'].current = 0.2;
   }
 
-  hideCursor() {
-    gsap.to(CSSRulePlugin.getRule('.cursor::before'), {
-      duration: 0.2,
-      cssRule: { opacity: 0 },
-    });
-  }
-
-  showCursor() {
-    gsap.to(CSSRulePlugin.getRule('.cursor::before'), {
-      duration: 0.2,
-      cssRule: { opacity: 1 },
-    });
+  leave() {
+    this.renderedStyles['scale'].current = 1;
+    this.renderedStyles['opacity'].current = 1;
   }
 
   render() {
-    this.cursorConfigs.x.current = mouse.x;
-    this.cursorConfigs.y.current = mouse.y;
-    const treshold = 10;
-
-    if (
-      mouse.x < treshold ||
-      mouse.x > window.innerWidth - treshold ||
-      mouse.y < treshold ||
-      mouse.y > window.innerHeight - treshold
-    ) {
-      this.hideCursor();
-    } else {
-      this.showCursor();
-    }
+    this.renderedStyles.x.current = mouse.x;
+    this.renderedStyles.y.current = mouse.y;
 
     // lerp
-    for (const key in this.cursorConfigs) {
-      this.cursorConfigs[key].previous = lerp(
-        this.cursorConfigs[key].previous,
-        this.cursorConfigs[key].current,
-        this.cursorConfigs[key].amt,
+    for (const key in this.renderedStyles) {
+      this.renderedStyles[key].previous = lerp(
+        this.renderedStyles[key].previous,
+        this.renderedStyles[key].current,
+        this.renderedStyles[key].amt,
       );
     }
     // Setting the cursor x and y to our cursoer html element
-    this.Cursor.style.transform = `translateX(${this.cursorConfigs.x.previous}px) translateY(${this.cursorConfigs.y.previous}px)`;
+    this.Cursor.style.transform = `translateX(${this.renderedStyles.x.previous}px) translateY(${this.renderedStyles.y.previous}px)`;
+    // this.Cursor.style.opacity = this.renderedStyles['opacity'].previous;
+
     // RAF
     requestAnimationFrame(() => this.render());
   }

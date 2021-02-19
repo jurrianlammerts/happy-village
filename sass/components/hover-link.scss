@@ -26,6 +26,12 @@
     }
   }
 
+  &.no-border {
+    &:after {
+      border-bottom: none;
+    }
+  }
+
   &.reversed {
     &:after {
       opacity: 1;
