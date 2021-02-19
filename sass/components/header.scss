@@ -52,18 +52,16 @@ header {
         right: 60px;
         width: 48px;
         height: 48px;
-        // I know this is hacky, but it works 😅
-        // FIXME: improve this someday
+        @include media('<=tablet') {
+          top: 28px;
+          right: 30px;
+        }
         .hamburger-react {
           position: fixed !important;
           top: 0;
           right: 0;
           z-index: 15;
           mix-blend-mode: exclusion;
-          @include media('<=tablet') {
-            top: 28px;
-            right: 30px;
-          }
           & > * {
             background-color: $white !important;
           }
