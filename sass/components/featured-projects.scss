@@ -5,6 +5,8 @@
   .featured-projects-title {
     display: flex;
     width: 100%;
+    padding: 4rem;
+    margin: 4rem 0;
 
     @include media('<=tablet') {
       justify-content: center;
@@ -28,32 +30,35 @@
   .featured-projects-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
     .featured-projects-item {
       margin: 2rem 1rem;
-      width: 100%;
+      width: 42.5%;
       height: 100%;
-      max-width: 500px;
-      max-height: 500px;
+
+      @include media('<=tablet') {
+        width: 100%;
+      }
 
       .featured-projects-item-image {
-        position: relative;
-        height: 100%;
-        width: 100%;
-        min-width: 500px;
-        min-height: 500px;
+        div {
+          width: 100%;
+          height: 100%;
+          img {
+            object-fit: cover;
+            border-radius: 2rem;
+          }
+        }
       }
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        border-radius: 2rem;
-      }
-      p {
-        font-size: 1.25rem;
+      .featured-projects-item-brand {
+        margin: 0 auto;
+        max-width: 270px;
+        p {
+          text-align: center;
+          font-size: 1.375rem;
+        }
       }
     }
   }
