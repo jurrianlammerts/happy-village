@@ -49,18 +49,7 @@ const FeaturedProjects = () => (
       {projectsData.map((project) => (
         <Link key={project.id} href={`/projects/${project.slug}`}>
           <a className="featured-projects-item">
-            {!isSafari ? (
-              <Tilt className="Tilt" options={{ max: 5, scale: 1.01 }}>
-                <div className="featured-projects-item-image">
-                  <Image
-                    src={project.imageSrc}
-                    height={500}
-                    width={500}
-                    alt={project.brand}
-                  />
-                </div>
-              </Tilt>
-            ) : (
+            <Tilt className="Tilt" options={{ max: 5, scale: 1.01 }}>
               <div className="featured-projects-item-image">
                 <Image
                   src={project.imageSrc}
@@ -69,7 +58,7 @@ const FeaturedProjects = () => (
                   alt={project.brand}
                 />
               </div>
-            )}
+            </Tilt>
             <div className="featured-projects-item-brand">
               <p>
                 <b>{project.brand}</b> - {project.title}
