@@ -37,25 +37,26 @@
       margin: 2rem 1rem;
       width: 42.5%;
       height: 100%;
+      text-decoration: none;
 
       @include media('<=tablet') {
         width: 100%;
       }
 
       .featured-projects-item-image {
-        div {
-          width: 100%;
-          height: 100%;
-          img {
-            object-fit: cover;
-            border-radius: 2rem;
-          }
+        width: 100%;
+        height: 100%;
+
+        img {
+          object-fit: cover;
+          border-radius: 2rem;
         }
       }
       .featured-projects-item-brand {
         margin: 0 auto;
         max-width: 270px;
         p {
+          color: $black;
           text-align: center;
           font-size: 1.375rem;
         }

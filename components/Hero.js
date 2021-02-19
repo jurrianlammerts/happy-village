@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
+import Tilt from 'react-tilt';
 import { isMobile, MobileView } from 'react-device-detect';
 
 import AutoplayVideo from './AutoplayVideo';
@@ -22,10 +23,12 @@ const Hero = () => {
         <div className="hero-inner">
           <div className="hero-video">
             <div className="hero-video-inner">
-              <AutoplayVideo
-                id="mobile-video"
-                src="videos/websites_mobile.mp4"
-              />
+              <Tilt className="Tilt" options={{ max: 50 }}>
+                <AutoplayVideo
+                  id="mobile-video"
+                  src="videos/websites_mobile.mp4"
+                />
+              </Tilt>
             </div>
           </div>
           <div className="hero-inner-banner">

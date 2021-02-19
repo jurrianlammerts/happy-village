@@ -1,9 +1,12 @@
 import Image from 'next/image';
+import Tilt from 'react-tilt';
+import Link from 'next/link';
 
 const projectsData = [
   {
     id: 1,
     brand: 'FYX',
+    slug: 'fyx',
     title: 'Social media marketing agency.',
     imageSrc: '/images/fyx.webp',
     tags: ['web', 'design', 'strategy'],
@@ -11,6 +14,7 @@ const projectsData = [
   {
     id: 2,
     brand: 'Ciro',
+    slug: 'ciro',
     title: 'Online banking and trading platform.',
     imageSrc: '/images/bank.webp',
     tags: ['app', 'branding', 'strategy'],
@@ -18,6 +22,7 @@ const projectsData = [
   {
     id: 3,
     brand: 'MAE',
+    slug: 'mae',
     title: 'Affordable, market-leading online cashier.',
     imageSrc: '/images/e-commerce.webp',
     tags: ['web', 'development', 'e-commerce'],
@@ -25,41 +30,44 @@ const projectsData = [
   {
     id: 4,
     brand: 'Coworking',
+    slug: 'coworking',
     title: 'Find the most suitable coworking space.',
     imageSrc: '/images/coworking.webp',
     tags: ['branding', 'strategy', 'design'],
   },
 ];
 
-const FeaturedProjects = () => {
-  return (
-    <section className="featured-projects">
-      <div className="featured-projects-title">
-        <h2>
-          featured <span>projects</span>
-        </h2>
-      </div>
-      <div className="featured-projects-list">
-        {projectsData.map((project) => (
-          <div key={project.id} className="featured-projects-item">
-            <div className="featured-projects-item-image">
-              <Image
-                src={project.imageSrc}
-                height={500}
-                width={500}
-                alt={project.brand}
-              />
-            </div>
+const FeaturedProjects = () => (
+  <section className="featured-projects">
+    <div className="featured-projects-title">
+      <h2>
+        featured <span>projects</span>
+      </h2>
+    </div>
+    <div className="featured-projects-list">
+      {projectsData.map((project) => (
+        <Link key={project.id} href={`/projects/${project.slug}`}>
+          <a className="featured-projects-item">
+            <Tilt className="Tilt" options={{ max: 5, scale: 1.01 }}>
+              <div className="featured-projects-item-image">
+                <Image
+                  src={project.imageSrc}
+                  height={500}
+                  width={500}
+                  alt={project.brand}
+                />
+              </div>
+            </Tilt>
             <div className="featured-projects-item-brand">
               <p>
                 <b>{project.brand}</b> - {project.title}
               </p>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+          </a>
+        </Link>
+      ))}
+    </div>
+  </section>
+);
 
 export default FeaturedProjects;
