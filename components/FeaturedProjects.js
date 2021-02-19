@@ -43,7 +43,12 @@ const FeaturedProjects = () => {
         {projectsData.map((project) => (
           <div key={project.id} className="featured-projects-item">
             <div className="featured-projects-item-image">
-              <Image src={project.imageSrc} height={500} width={500} />
+              <Image
+                src={project.imageSrc}
+                height={500}
+                width={500}
+                alt={project.brand}
+              />
             </div>
             <div className="featured-projects-item-brand">
               <p>

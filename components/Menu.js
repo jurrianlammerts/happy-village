@@ -11,6 +11,9 @@ const Menu = ({ handleMenu, menuOpen }) => {
 
   return (
     <div className="menu" ref={menuRef}>
+      <div className={`menu-logo ${menuOpen && 'open'}`}>
+        <Link href="/">lamb digital</Link>
+      </div>
       <div className="menu-inner">
         <div className="menu-inner-row">
           <ul className="menu-list left">
