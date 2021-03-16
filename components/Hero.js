@@ -19,7 +19,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <div className="container">
+      <div className="hero-container">
         <div className="hero-inner">
           <div className="hero-video">
             <div className="hero-video-inner">

@@ -1,0 +1,29 @@
+.project-header {
+  background-color: $white;
+
+  .project-header-container {
+    @include container;
+
+    .project-header-title {
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: 0;
+      }
+      h2 {
+        @include montserrat;
+        font-size: 5vw;
+        @include media('<=desktop') {
+          font-size: 5rem;
+        }
+        @include media('<=tablet') {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}

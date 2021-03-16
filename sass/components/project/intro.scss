@@ -1,0 +1,53 @@
+.project-intro {
+  background-color: $white;
+  padding: 300px 0;
+  @include media('<=desktop') {
+    padding: 170px 0;
+  }
+  @include media('<=tablet') {
+    padding: 120px 0;
+  }
+  .project-intro-container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    @include media('<=tablet') {
+      flex-direction: column;
+    }
+
+    .project-intro-col {
+      &.-left {
+        width: 30%;
+        h2 {
+          @include montserrat;
+          margin-top: 2rem;
+        }
+        @include media('<=tablet') {
+          width: 100%;
+          h2 {
+            font-size: 2rem;
+          }
+        }
+      }
+
+      &.-right {
+        width: 60%;
+        a {
+          font-weight: 700;
+        }
+        a,
+        p {
+          color: $black;
+          font-size: 2rem;
+        }
+        @include media('<=tablet') {
+          width: 100%;
+          a,
+          p {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,6 +1,6 @@
 .hero {
-  background: #fff;
-  .container {
+  background: $white;
+  .hero-container {
     @include container;
     .hero-inner {
       min-height: 80vh;

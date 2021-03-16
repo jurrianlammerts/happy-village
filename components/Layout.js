@@ -4,7 +4,7 @@ import { gsap } from 'gsap';
 import { Cross as Hamburger } from 'hamburger-react';
 import { BrowserView, isMobile } from 'react-device-detect';
 
-import Header from './Header';
+import Nav from './Nav';
 import Menu from './Menu';
 import Backdrop from './Backdrop';
 import Footer from './Footer';
@@ -12,7 +12,7 @@ import CursorComponent from './Cursor';
 import Cursor from '../utils/cursor';
 import Button from '../utils/cursor';
 
-const Layout = ({ children }) => {
+const Layout = ({ home = false, children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -44,10 +44,10 @@ const Layout = ({ children }) => {
 
   return (
     <div className="page">
-      <Header handleMenu={handleMenu} menuOpen={menuOpen} />
+      <Nav handleMenu={handleMenu} menuOpen={menuOpen} />
       <Menu handleMenu={handleMenu} menuOpen={menuOpen} />
       <BrowserView>
-        <CursorComponent />
+        <CursorComponent home={home} />
       </BrowserView>
 
       {menuOpen && <Backdrop />}

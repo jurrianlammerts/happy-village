@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 
-const AutoplayVideo = ({ src, id }) => (
+const AutoplayVideo = ({ src, id, style }) => (
   <div
+    id={id}
+    style={style}
     dangerouslySetInnerHTML={{
       __html: `
         <video

@@ -9,7 +9,30 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head />
+        <Head>
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="true"
+          />
+          <link
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&family=Roboto&display=swap"
+          />
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&family=Roboto&display=swap"
+            media="print"
+            onLoad="this.media='all'"
+          />
+          <noscript>
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,400&family=Roboto&display=swap"
+            />
+          </noscript>
+        </Head>
         <body>
           <Main />
           <NextScript />

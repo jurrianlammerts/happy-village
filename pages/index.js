@@ -5,7 +5,7 @@ import FeaturedProjects from '../components/FeaturedProjects';
 import Chat from '../components/Chat';
 
 const Home = () => (
-  <Layout>
+  <Layout home>
     <SEO />
     <Hero />
     <FeaturedProjects />
