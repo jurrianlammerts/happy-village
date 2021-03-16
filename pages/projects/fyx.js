@@ -7,6 +7,46 @@ import AutoplayVideo from '../../components/AutoplayVideo';
 import Header from '../../components/Project/Header';
 import IntroText from '../../components/Project/IntroText';
 import Video from '../../components/Project/Video';
+import ImageGallery from '../../components/Project/ImageGallery';
+
+const images = [
+  {
+    id: 1,
+    src: '/images/e-commerce.webp',
+    alt: 'fyx logo',
+    description:
+      'Our first task was to give a makeover to FYX logotype and corporate identity.',
+    width: 500,
+    height: 600,
+  },
+  {
+    id: 2,
+    src: '/images/bank.webp',
+    alt: 'fyx logo',
+    description:
+      'Our first task was to give a makeover to FYX logotype and corporate identity.',
+    width: 500,
+    height: 600,
+  },
+  {
+    id: 3,
+    src: '/images/coworking.webp',
+    alt: 'fyx logo',
+    description:
+      'Our first task was to give a makeover to FYX logotype and corporate identity.',
+    width: 500,
+    height: 600,
+  },
+  {
+    id: 4,
+    src: '/images/fyx.webp',
+    alt: 'fyx logo',
+    description:
+      'Our first task was to give a makeover to FYX logotype and corporate identity.',
+    width: 500,
+    height: 600,
+  },
+];
 
 const fyx = () => {
   return (
@@ -47,6 +87,7 @@ const fyx = () => {
         title="The design will not leave you cold"
         body="Plenty of illustrations and icons, bright hues, and micro animated functional elements all come together to really set a creative mood and submerge the user in the app’s special atmosphere."
       />
+      <ImageGallery images={images}/>
       <Chat />
     </Layout>
   );
