@@ -1,0 +1,9 @@
+.video {
+  @include container;
+  position: relative;
+  background-color: $white;
+
+  video {
+    width: 100%;
+  }
+}

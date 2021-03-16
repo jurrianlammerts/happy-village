@@ -6,7 +6,7 @@
 @import './mixins/montserrat';
 @import './mixins/default-font';
 // components
-@import './components/header';
+@import './components/nav';
 @import './components/page';
 @import './components/hero';
 @import './components/cursor';
@@ -16,10 +16,10 @@
 @import './components/footer';
 @import './components/hover-link';
 @import './components/featured-projects';
-@import './components/magentic-hover';
 // project
 @import './components/project/header';
 @import './components/project/intro';
+@import './components/project/video';
 
 *,
 *::after,

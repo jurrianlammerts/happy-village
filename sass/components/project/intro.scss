@@ -19,7 +19,8 @@
       &.-left {
         width: 30%;
         h2 {
-          @include montserrat;
+          @include default-font;
+          font-weight: 600;
           margin-top: 2rem;
         }
         @include media('<=tablet') {

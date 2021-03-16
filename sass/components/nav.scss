@@ -58,8 +58,8 @@
         }
         .hamburger-react {
           position: fixed !important;
-          top: 0;
-          right: 0;
+          top: 50px;
+          right: 60px;
           z-index: 15;
           mix-blend-mode: exclusion;
           & > * {
