@@ -46,22 +46,19 @@
         }
       }
       .header-inner-menu-burger {
-        position: fixed;
-        z-index: 16;
-        top: 50px;
-        right: 60px;
-        width: 48px;
-        height: 48px;
-        @include media('<=tablet') {
-          top: 28px;
-          right: 30px;
-        }
+        cursor: pointer;
+        position: absolute;
+        z-index: 15;
+        mix-blend-mode: exclusion;
         .hamburger-react {
           position: fixed !important;
           top: 50px;
           right: 60px;
           z-index: 15;
-          mix-blend-mode: exclusion;
+          @include media('<=tablet') {
+            top: 30px;
+            right: 30px;
+          }
           & > * {
             background-color: $white !important;
           }
