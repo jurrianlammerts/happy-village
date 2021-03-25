@@ -20,7 +20,9 @@ const Layout = ({ home = false, children }) => {
     const body = document.querySelector('body');
     menuOpen ? body.classList.add('fixed') : body.classList.remove('fixed');
     if (!isMobile) {
-      new Cursor(document.querySelector('.cursor'));
+      const cursor = document.querySelector('.cursor');
+      new Cursor(cursor);
+      cursor.style.setProperty('--scale', 0.2);
     }
   }, []);
 

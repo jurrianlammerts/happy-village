@@ -13,7 +13,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
     <div className="menu" ref={menuRef}>
       <div className={`menu-logo ${menuOpen && 'open'}`}>
         <Link href="/">
-          <a className="hover-link">lamb digital</a>
+          <a className="hover-link no-border">lamb digital</a>
         </Link>
       </div>
       <div className="menu-inner">

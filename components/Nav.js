@@ -6,7 +6,7 @@ const Header = ({ handleMenu, menuOpen }) => (
     <div className="header-inner">
       <div className="header-inner-logo">
         <Link href="/">
-          lamb digital
+          <a className="hover-link no-border">lamb digital</a>
         </Link>
       </div>
       <div className="header-inner-menu">
