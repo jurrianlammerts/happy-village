@@ -18,11 +18,12 @@ const Layout = ({ home = false, children }) => {
 
   useEffect(() => {
     const body = document.querySelector('body');
+    const root = document.querySelector('html');
     menuOpen ? body.classList.add('fixed') : body.classList.remove('fixed');
     if (!isMobile) {
       const cursor = document.querySelector('.cursor');
       new Cursor(cursor);
-      document.style.setProperty('--scale', 0.2);
+      root.style.setProperty('--scale', 0.2);
     }
   }, []);
 
