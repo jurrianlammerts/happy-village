@@ -8,6 +8,7 @@ import Header from '../../components/Project/Header';
 import IntroText from '../../components/Project/IntroText';
 import Video from '../../components/Project/Video';
 import ImageGallery from '../../components/Project/ImageGallery';
+import NextProject from '../../components/Project/NextProject';
 
 const images = [
   {
@@ -51,7 +52,7 @@ const images = [
 const fyx = () => {
   return (
     <Layout>
-      <SEO />
+      <SEO pageTitle="FYX • lamb digital" />
       <Header brand="FYX" title="Be distinctive, not different" />
       <ParallaxBanner
         layers={[
@@ -87,7 +88,8 @@ const fyx = () => {
         title="The design will not leave you cold"
         body="Plenty of illustrations and icons, bright hues, and micro animated functional elements all come together to really set a creative mood and submerge the user in the app’s special atmosphere."
       />
-      <ImageGallery images={images}/>
+      <ImageGallery images={images} />
+      <NextProject href="/projects/" />
       <Chat />
     </Layout>
   );

@@ -1,0 +1,15 @@
+.next-project {
+  display: flex;
+  background-color: $white;
+  height: 400px;
+  justify-content: center;
+  align-items: flex-start;
+
+  a {
+    color: $black;
+    font-size: 5rem;
+    @include media('<=desktop') {
+      font-size: 8vw;
+    }
+  }
+}

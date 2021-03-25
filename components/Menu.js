@@ -12,7 +12,7 @@ const Menu = ({ handleMenu, menuOpen }) => {
   return (
     <div className="menu" ref={menuRef}>
       <div className={`menu-logo ${menuOpen && 'open'}`}>
-        <Link href="/">lamb digital</Link>
+        <Link href="/" scroll={false}>lamb digital</Link>
       </div>
       <div className="menu-inner">
         <div className="menu-inner-row">
@@ -62,22 +62,22 @@ const Menu = ({ handleMenu, menuOpen }) => {
           <ul className="menu-list right">
             <li className="menu-list-label">Menu</li>
             <li className="menu-list-item">
-              <Link href="/">
+              <Link href="/" scroll={false}>
                 <a className="hover-link">Work</a>
               </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">
+              <Link href="/" scroll={false}>
                 <a className="hover-link">About</a>
               </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">
+              <Link href="/" scroll={false}>
                 <a className="hover-link">Services</a>
               </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">
+              <Link href="/" scroll={false}>
                 <a className="hover-link">Contact</a>
               </Link>
             </li>

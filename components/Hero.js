@@ -39,15 +39,21 @@ const Hero = () => {
               <div className="hero-inner-links">
                 <div data-video-src="websites" className="hero-inner-link-item">
                   <div className="hero-inner-link-item-padding"></div>
-                  <Link href="/">Websites</Link>
+                  <Link href="/" scroll={false}>
+                    Websites
+                  </Link>
                 </div>
                 <div data-video-src="apps" className="hero-inner-link-item">
                   <div className="hero-inner-link-item-padding"></div>
-                  <Link href="/">Apps</Link>
+                  <Link href="/" scroll={false}>
+                    Apps
+                  </Link>
                 </div>
                 <div className="hero-inner-link-item" data-video-src="branding">
                   <div className="hero-inner-link-item-padding"></div>
-                  <Link href="/">Strategy</Link>
+                  <Link href="/" scroll={false}>
+                    Strategy
+                  </Link>
                 </div>
               </div>
             </div>

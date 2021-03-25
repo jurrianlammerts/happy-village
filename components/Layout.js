@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { Cross as Hamburger } from 'hamburger-react';
 import { BrowserView, isMobile } from 'react-device-detect';
@@ -16,16 +17,15 @@ const Layout = ({ home = false, children }) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    const body = document.querySelector('body');
+    menuOpen ? body.classList.add('fixed') : body.classList.remove('fixed');
     if (!isMobile) {
       new Cursor(document.querySelector('.cursor'));
     }
   }, []);
 
   const handleMenu = () => {
-    const body = document.querySelector('body');
-
     if (!menuOpen) {
-      body.classList.add('fixed');
       setMenuOpen(true);
       gsap.to('.menu', {
         x: 0,
@@ -34,7 +34,6 @@ const Layout = ({ home = false, children }) => {
     }
 
     if (menuOpen) {
-      body.classList.remove('fixed');
       setMenuOpen(false);
       gsap.to('.menu', {
         x: '100%',
@@ -43,7 +42,7 @@ const Layout = ({ home = false, children }) => {
   };
 
   return (
-    <div className="page">
+    <motion.div className="page">
       <Nav handleMenu={handleMenu} menuOpen={menuOpen} />
       <Menu handleMenu={handleMenu} menuOpen={menuOpen} />
       <BrowserView>
@@ -55,7 +54,7 @@ const Layout = ({ home = false, children }) => {
       {/* For the paralax footer */}
       <div className="page-placeholder" />
       <Footer />
-    </div>
+    </motion.div>
   );
 };
 

@@ -5,6 +5,8 @@
 @import './mixins/container';
 @import './mixins/montserrat';
 @import './mixins/default-font';
+@import './mixins/bounce-out';
+@import './mixins/prefixed';
 // components
 @import './components/nav';
 @import './components/page';
@@ -21,6 +23,7 @@
 @import './components/project/intro';
 @import './components/project/video';
 @import './components/project/image-gallery';
+@import './components/project/next-project';
 
 *,
 *::after,

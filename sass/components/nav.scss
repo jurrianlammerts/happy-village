@@ -59,6 +59,9 @@
             top: 30px;
             right: 30px;
           }
+          &:hover {
+            @include bounce-out;
+          }
           & > * {
             background-color: $white !important;
           }

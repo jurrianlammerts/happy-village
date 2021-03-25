@@ -3,7 +3,9 @@ import Head from 'next/head';
 
 const SEO = ({ pageTitle }) => (
   <Head>
-    <title>lamb digital • leading digital agency</title>
+    <title>
+      {pageTitle ? pageTitle : 'lamb digital • leading digital agency'}
+    </title>
     <link rel="icon" href="/favicon.ico" />
     <meta
       name="description"

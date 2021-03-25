@@ -6,7 +6,7 @@ const Footer = () => (
       <div className="footer-inner-top">
         <h2>Have an idea?</h2>
         <h2>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <a className="hover-link reversed">Tell us about it</a>
           </Link>
         </h2>

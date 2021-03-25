@@ -1,7 +1,14 @@
 .image-gallery {
   height: 100%;
   .image-gallery-inner {
-    @include container;
+    padding: 5rem 240px 0 240px;
+    height: 100%;
+    @include media('<=desktop') {
+      padding: 8rem 60px;
+    }
+    @include media('<=tablet') {
+      padding: 5rem 30px;
+    }
     background-color: $white;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -21,6 +28,10 @@
       @for $i from 1 through 5 {
         &:nth-child(#{$i}) {
           transform: translateY(100px * $i);
+          @include media('<=tablet') {
+            transform: none;
+            margin-top: 2rem;
+          }
         }
       }
 
