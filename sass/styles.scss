@@ -31,10 +31,6 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   @include default-font;
   color: $black;
