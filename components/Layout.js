@@ -22,7 +22,7 @@ const Layout = ({ home = false, children }) => {
     if (!isMobile) {
       const cursor = document.querySelector('.cursor');
       new Cursor(cursor);
-      cursor.style.setProperty('--scale', 0.2);
+      document.style.setProperty('--scale', 0.2);
     }
   }, []);
 

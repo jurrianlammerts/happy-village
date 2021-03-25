@@ -12,8 +12,8 @@ const Hero = () => {
   useEffect(() => {
     gsap.fromTo(
       '.hero-video-inner',
-      { scale: 0 },
-      { scale: 1, ease: 'bounce.out', delay: 0.5, duration: 1.25 },
+      { opacity: 0 },
+      { opacity: 1, ease: 'bounce.out', duration: 0.25 },
     );
   }, []);
 
