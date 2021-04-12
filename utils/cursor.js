@@ -59,6 +59,7 @@ export default class Cursor {
       }
       // On mouse enter scale the media-cursor to .8
       link.addEventListener('mouseenter', () => {
+        this.Cursor.classList.add('media-blend');
         this.setVideo(link);
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       });

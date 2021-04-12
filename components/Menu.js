@@ -64,22 +64,22 @@ const Menu = ({ handleMenu, menuOpen }) => {
           <ul className="menu-list right">
             <li className="menu-list-label">Menu</li>
             <li className="menu-list-item">
-              <Link href="/">
+              <Link href="/work">
                 <a className="hover-link">Work</a>
               </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">
+              <Link href="/about">
                 <a className="hover-link">About</a>
               </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">
+              <Link href="/services">
                 <a className="hover-link">Services</a>
               </Link>
             </li>
             <li className="menu-list-item">
-              <Link href="/">
+              <Link href="/contact">
                 <a className="hover-link">Contact</a>
               </Link>
             </li>

@@ -46,7 +46,7 @@ const FeaturedProjects = () => (
     </div>
     <div className="featured-projects-list">
       {projectsData.map((project) => (
-        <Link key={project.id} href={`/projects/${project.slug}`}>
+        <Link key={project.id} href={`/work/${project.slug}`}>
           <a className="featured-projects-item hover-link no-border">
             <div className="featured-projects-item-image">
               <Image

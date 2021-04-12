@@ -78,7 +78,7 @@ const Hero = () => {
                     className="hero-inner-link-item"
                   >
                     <div className="hero-inner-link-item-padding"></div>
-                    <Link href="/">Websites</Link>
+                    <Link href="/services/websites">Websites</Link>
                   </motion.div>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -93,7 +93,7 @@ const Hero = () => {
                     className="hero-inner-link-item"
                   >
                     <div className="hero-inner-link-item-padding"></div>
-                    <Link href="/">Apps</Link>
+                    <Link href="/services/apps">Apps</Link>
                   </motion.div>
                   <motion.div
                     initial={{ y: 100, opacity: 0 }}
@@ -108,7 +108,7 @@ const Hero = () => {
                     data-video-src="branding"
                   >
                     <div className="hero-inner-link-item-padding"></div>
-                    <Link href="/">Strategy</Link>
+                    <Link href="/services/strategy">Strategy</Link>
                   </motion.div>
                 </div>
               </AnimatePresence>
