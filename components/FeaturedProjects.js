@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { isSafari } from 'react-device-detect';
-import Tilt from 'react-tilt';
 
 const projectsData = [
   {

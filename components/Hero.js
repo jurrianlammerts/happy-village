@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
-import Tilt from 'react-tilt';
 import { isMobile, MobileView } from 'react-device-detect';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -28,12 +27,10 @@ const Hero = () => {
         <div className="hero-inner">
           <div className="hero-video">
             <div className="hero-video-inner">
-              <Tilt>
-                <AutoplayVideo
-                  id="mobile-video"
-                  src="videos/websites_mobile.mp4"
-                />
-              </Tilt>
+              <AutoplayVideo
+                id="mobile-video"
+                src="videos/websites_mobile.mp4"
+              />
             </div>
           </div>
           <div className="hero-inner-banner">
@@ -118,7 +115,17 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="hero-inner-footer">
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            transition: {
+              delay: 0.9,
+            },
+          }}
+          className="hero-inner-footer"
+        >
           <div className="hero-inner-footer-text">
             <p>
               Leading digital agency with solid design and development
@@ -126,7 +133,7 @@ const Hero = () => {
               elaborate online business services.
             </p>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
