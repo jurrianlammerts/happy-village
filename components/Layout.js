@@ -24,6 +24,7 @@ const Layout = ({ home = false, children }) => {
       const cursor = document.querySelector('.cursor');
       new Cursor(cursor);
       root.style.setProperty('--scale', 0.2);
+      cursor.style.opacity = 0;
     }
   }, []);
 

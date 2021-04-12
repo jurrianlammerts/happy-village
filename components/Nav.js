@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import { Cross as Hamburger } from 'hamburger-react';
+import { motion } from 'framer-motion';
+
 
 const Header = ({ handleMenu, menuOpen }) => (
   <header className="header">
     <div className="header-inner">
       <div className="header-inner-logo">
         <Link href="/">
-          <a className="hover-link no-border">lamb digital</a>
+          <motion.a className="hover-link no-border">lamb digital</motion.a>
         </Link>
       </div>
       <div className="header-inner-menu">

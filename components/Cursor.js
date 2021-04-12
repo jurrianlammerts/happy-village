@@ -1,5 +1,5 @@
 const Cursor = ({ home = false }) => (
-  <div className="cursor">
+  <div className="cursor difference-blend">
     {home && (
       <div className="cursor-media">
         <video

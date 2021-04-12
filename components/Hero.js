@@ -13,7 +13,7 @@ const Hero = () => {
     gsap.fromTo(
       '.hero-video-inner',
       { opacity: 0 },
-      { opacity: 1, ease: 'bounce.out', duration: 0.25 },
+      { opacity: 1, ease: 'bounce.out', duration: 0.75 },
     );
   }, []);
 
@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="hero-inner">
           <div className="hero-video">
             <div className="hero-video-inner">
-              <Tilt className="Tilt" options={{ max: 50 }}>
+              <Tilt>
                 <AutoplayVideo
                   id="mobile-video"
                   src="videos/websites_mobile.mp4"

@@ -6,7 +6,11 @@
   contain: layout style size;
   pointer-events: none;
   display: block;
-  mix-blend-mode: difference;
+
+  &.difference-blend {
+    mix-blend-mode: difference;
+  }
+
   &.media-blend {
     z-index: 100;
     mix-blend-mode: exclusion;

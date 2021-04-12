@@ -20,7 +20,7 @@ export default class Cursor {
       x: { previous: 0, current: 0, amt: 0.2 },
       y: { previous: 0, current: 0, amt: 0.2 },
       scale: { previous: 1, current: 1, amt: 0.2 },
-      opacity: { previous: 1, current: 1, amt: 0.2 },
+      opacity: { previous: 0, current: 0, amt: 0.2 },
     };
 
     this.onMouseMoveEv = () => {
@@ -64,7 +64,9 @@ export default class Cursor {
       });
       // On mouse enter scale the media-cursor to 0
       link.addEventListener('mouseleave', () => {
+        this.Cursor.classList.remove('media-blend');
         this.ScaleCursor(this.Cursor.children[0], 0);
+        this.Cursor.classList.add('difference-blend');
       });
       // Hover on a tag to expand to 1.2
       link.children[1].addEventListener('mouseenter', () => {
@@ -73,7 +75,6 @@ export default class Cursor {
       });
       // Bring scale back down .8
       link.children[1].addEventListener('mouseleave', () => {
-        this.Cursor.classList.remove('media-blend');
         this.ScaleCursor(this.Cursor.children[0], 0.8);
       });
     });
