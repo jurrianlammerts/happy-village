@@ -37,6 +37,7 @@ body {
   color: $black;
   background: $white;
   font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
 }
 
 button {
