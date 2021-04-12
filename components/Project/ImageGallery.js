@@ -1,15 +1,11 @@
-import { Parallax } from 'react-scroll-parallax';
+import { Parallax } from 'react-parallax';
 import Image from 'next/image';
 
 const ImageGallery = ({ images }) => (
   <section className="image-gallery">
     <div className="image-gallery-inner">
       {images.map((item, index) => (
-        <Parallax
-          className={`image-gallery-item -${index + 1}`}
-          key={item.id}
-          y={[-20, 20]}
-        >
+        <Parallax strength={300} className="parallax" key={item.id}>
           <Image src={item.src} alt={item.alt} layout="fill" />
         </Parallax>
       ))}

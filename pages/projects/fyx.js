@@ -1,4 +1,4 @@
-import { Parallax, ParallaxBanner } from 'react-scroll-parallax';
+import { Parallax, Background } from 'react-parallax';
 
 import Layout from '../../components/Layout';
 import SEO from '../../components/SEO';
@@ -9,6 +9,7 @@ import IntroText from '../../components/Project/IntroText';
 import Video from '../../components/Project/Video';
 import ImageGallery from '../../components/Project/ImageGallery';
 import NextProject from '../../components/Project/NextProject';
+import Image from 'next/image';
 
 const images = [
   {
@@ -54,17 +55,12 @@ const fyx = () => {
     <Layout>
       <SEO pageTitle="FYX • lamb digital" />
       <Header brand="FYX" title="Be distinctive, not different" />
-      <ParallaxBanner
-        layers={[
-          {
-            image: '/images/fyx-4.jpg',
-            amount: 0.4,
-          },
-        ]}
-        style={{
-          height: '100vh',
-        }}
-      />
+
+      <Parallax strength={300} className="parallax -large">
+        <Background className="custom-bg">
+          <Image src="/images/fyx-4.jpg" height={750} width={1000} />
+        </Background>
+      </Parallax>
 
       <IntroText
         href="https://fyx.nl"
@@ -73,17 +69,13 @@ const fyx = () => {
       />
       <Video id="groof" src="/videos/Groof.mp4" />
       <Header title="Careful rebranding" />
-      <ParallaxBanner
-        layers={[
-          {
-            image: '/images/fyx-3.jpg',
-            amount: 0.4,
-          },
-        ]}
-        style={{
-          height: '100vh',
-        }}
-      />
+
+      <Parallax strength={300} className="parallax -large">
+        <Background className="custom-bg">
+          <Image src="/images/fyx-3.jpg" height={750} width={1000} />
+        </Background>
+      </Parallax>
+
       <Header
         title="The design will not leave you cold"
         body="Plenty of illustrations and icons, bright hues, and micro animated functional elements all come together to really set a creative mood and submerge the user in the app’s special atmosphere."
