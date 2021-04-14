@@ -1,6 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
-import { isSafari } from 'react-device-detect';
+import Image from '../components/Image';
 
 const projectsData = [
   {
@@ -51,6 +50,7 @@ const FeaturedProjects = () => (
             <div className="featured-projects-item-image">
               <Image
                 src={project.imageSrc}
+                borderRadius
                 height={500}
                 width={500}
                 alt={project.brand}

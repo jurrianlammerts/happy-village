@@ -55,9 +55,7 @@ const Layout = ({ home = false, children }) => {
 
       {menuOpen && <Backdrop />}
       <section className="page-inner">{children}</section>
-    {/* For the paralax footer
-      <div className="page-placeholder" />
-      <Footer /> */}
+      <Footer />
     </motion.div>
   );
 };

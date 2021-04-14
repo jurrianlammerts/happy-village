@@ -9,7 +9,7 @@ import IntroText from '../../components/Project/IntroText';
 import Video from '../../components/Project/Video';
 import ImageGallery from '../../components/Project/ImageGallery';
 import NextProject from '../../components/Project/NextProject';
-import Image from 'next/image';
+import Image from '../../components/Image';
 
 const images = [
   {

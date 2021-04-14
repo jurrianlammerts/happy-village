@@ -8,7 +8,7 @@ import Header from '../components/Project/Header';
 import IntroText from '../components/Project/IntroText';
 import Video from '../components/Project/Video';
 import ImageGallery from '../components/Project/ImageGallery';
-import Image from 'next/image';
+import Image from '../components/Image';
 
 const Contact = () => {
   return (

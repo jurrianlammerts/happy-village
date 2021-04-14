@@ -1,5 +1,5 @@
 import { Parallax } from 'react-parallax';
-import Image from 'next/image';
+import Image from '../Image';
 
 const ImageGallery = ({ images }) => (
   <section className="image-gallery">
